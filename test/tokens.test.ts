@@ -1,7 +1,7 @@
 import { schema, TokenList } from '@uniswap/token-lists'
 import Ajv from 'ajv'
 import addFormats from 'ajv-formats'
-import tokens from '../public/swap_list.json'
+import tokens from '../public/tokens.json'
 
 function validate(data: TokenList) {
   const ajv = new Ajv({ allErrors: true, verbose: true })
