@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 9001",
-    "build": "next build",
-    "start": "next start",
+    "dev": "yarn prepare && next dev -p 9001",
+    "build": "yarn prepare && next build",
+    "start": "yarn prepare &&next start",
     "lint": "next lint",
-    "test": "jest"
+    "format": "eslint --fix './pages/**/**.{ts,tsx}'",
+    "test": "jest",
+    "prepare": "yarn format"
   },
   "dependencies": {
     "next": "12.1.6",
